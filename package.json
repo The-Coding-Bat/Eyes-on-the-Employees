@@ -1,0 +1,23 @@
+{
+  "name": "eyes-on-the-employees",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/The-Coding-Bat/Eyes-on-the-Employees.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/The-Coding-Bat/Eyes-on-the-Employees/issues"
+  },
+  "homepage": "https://github.com/The-Coding-Bat/Eyes-on-the-Employees#readme",
+  "dependencies": {
+    "inquirer": "^8.2.2"
+  }
+}
