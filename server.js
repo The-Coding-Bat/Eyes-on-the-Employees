@@ -1,11 +1,11 @@
-const mysql = require('mysql');
+const mysql = require('mysql2');
 const inquirer = require('inquirer');
-const consoleTable = require('console.table')
+require('console.table')
 
 // creates connection to sql database
 const connection = mysql.createConnection({
     host: 'localhost',
-    port: 3001,
+    port: 3306,
     user: 'root',
     password: 'Draculax1!',
     database: 'eyes_on_employees'
@@ -17,7 +17,7 @@ connection.connect(function(err){
     startMenu();
 })
 
-// prompts user with list of options to choose from
+// Start Menu function with all of the options
 const startMenu = () => {
     inquirer.prompt ([
       {
@@ -242,7 +242,7 @@ updateEmployee = () => {
     // get employees from employee table 
     const employeeSql = `SELECT * FROM employee`;
   
-    connection.promise().query(employeeSql, (err, data) => {
+    connection.query(employeeSql, (err, data) => {
       if (err) throw err; 
   
     const employees = data.map(({ id, first_name, last_name }) => ({ name: first_name + " "+ last_name, value: id }));
@@ -256,13 +256,13 @@ updateEmployee = () => {
         }
       ])
         .then(empChoice => {
-          const employee = empChoice.name;
+          let employee = empChoice.name;
           const params = []; 
           params.push(employee);
   
           const roleSql = `SELECT * FROM role`;
   
-          connection.promise().query(roleSql, (err, data) => {
+          connection.query(roleSql, (err, data) => {
             if (err) throw err; 
   
             const roles = data.map(({ id, title }) => ({ name: title, value: id }));
@@ -279,7 +279,7 @@ updateEmployee = () => {
                   const role = roleChoice.role;
                   params.push(role); 
                   
-                  let employee = params[0]
+                  employee = params[0]
                   params[0] = role
                   params[1] = employee 
   
@@ -289,7 +289,7 @@ updateEmployee = () => {
                     if (err) throw err;
                   console.log("Employee has been updated!");
                 
-                  showEmployees();
+                  viewEmployees();
             });
           });
         });
