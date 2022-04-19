@@ -73,8 +73,8 @@ const startMenu = () => {
 
 // view all employees in the database
 function viewEmployees() {
-    let query = 'SELECT * FROM employee';
-    connection.query(query, function(err, res) {
+    let employeeQuery = 'SELECT * FROM employee';
+    connection.query(employeeQuery, function(err, res) {
         if (err) throw err;
         console.log(res.length + ' employees found!');
         console.table('All Employees:', res); 
@@ -84,8 +84,8 @@ function viewEmployees() {
 
 // view all departments in the database
 function viewDepartments() {
-    let query = 'SELECT * FROM department';
-    connection.query(query, function(err, res) {
+    let deptQuery = 'SELECT * FROM department';
+    connection.query(deptQuery, function(err, res) {
         if(err)throw err;
         console.table('All Departments:', res);
         startMenu();
@@ -94,8 +94,8 @@ function viewDepartments() {
 
 // view all roles in the database
 function viewRoles() {
-    let query = 'SELECT * FROM role';
-    connection.query(query, function(err, res){
+    let roleQuery = 'SELECT * FROM role';
+    connection.query(roleQuery, function(err, res){
         if (err) throw err;
         console.table('All Roles:', res);
         startMenu();
@@ -175,8 +175,8 @@ function addDepartment() {
                     {
                         name: answer.newDepartment
                     });
-                let query = 'SELECT * FROM department';
-                connection.query(query, function(err, res) {
+                let deptQuery = 'SELECT * FROM department';
+                connection.query(deptQuery, function(err, res) {
                 if(err)throw err;
                 console.log('Your department has been added!');
                 console.table('All Departments:', res);
@@ -299,3 +299,4 @@ updateEmployee = () => {
       });
     });
   };
+  
