@@ -238,6 +238,7 @@ function addRole() {
     })
 };
 
+// update employees database information
 updateEmployee = () => {
     // get employees from employee table 
     const employeeSql = `SELECT * FROM employee`;
@@ -296,3 +297,5 @@ updateEmployee = () => {
       });
     });
   };
+
+  

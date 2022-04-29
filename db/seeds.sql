@@ -11,10 +11,10 @@ VALUES
 ('Operations Manager', 100000, 4),
 ('Full Stack Developer', 85000, 1),
 ('Software Engineer', 120000, 1),
+('Sales Lead', 120000, 3);
 ('Accountant', 10000, 2), 
 ('Finanical Analyst', 175000, 2),
 ('Marketing Coordindator', 80000, 3), 
-('Sales Lead', 120000, 3);
 
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
