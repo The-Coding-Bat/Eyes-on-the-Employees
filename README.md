@@ -24,4 +24,5 @@ Want to contribute in some way? Contact me! See info below!
 If you have any questions about this projects, please contact me at tedmjablonowski@gmail.com. https://github.com/The-Coding-Bat.
 
 link to video tutorial here!
-https://drive.google.com/file/d/15twWu7bax4wY1ZRfoQu0WG5Gz-tmrmUA/view
+Note: For my own amusement, this is WWE based. Feel free to format it however you want!
+https://drive.google.com/file/d/1NBnCKWgqdtdiKcAXPBrEedW5F5h9M5hd/view
