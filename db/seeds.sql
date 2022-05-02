@@ -1,20 +1,20 @@
 INSERT INTO department (name)
 VALUES 
-('IT'),
-('Finance & Accounting'),
-('Sales & Marketing'),
-('Operations');
+('Administration'),
+('Wrestlers'),
+('Training'),
+('Financial');
 
 INSERT INTO role (title, salary, department_id)
 VALUES
-('Project Manager', 150000, 4),
-('Operations Manager', 100000, 4),
-('Full Stack Developer', 85000, 1),
-('Software Engineer', 120000, 1),
-('Sales Lead', 120000, 3);
-('Accountant', 10000, 2), 
-('Finanical Analyst', 175000, 2),
-('Marketing Coordindator', 80000, 3), 
+('President', 15000000, 4),
+('CEO', 1000000, 4),
+('World Champion', 800000, 1),
+('Champion', 550000, 2),
+('Superstar', 125000, 1),
+('Head Trainer', 120000, 3),
+('Trainer', 100000, 2), 
+('Marketing Coordindator', 80000, 3);
 
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
